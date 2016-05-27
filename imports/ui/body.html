@@ -1,0 +1,38 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>SAT-solver</h1>
+
+      <h3 id="current_active">{{> current_formula}}</h3>
+
+    <form class="new-add">
+        <input type="text" name="text" id="filler" placeholder="Type to add new tasks" />
+
+        <button class="submitter" type="submit">Submit</button>
+    </form>
+
+    <div class="button-grid">
+        <!--<button class=".exec-logic">Execute</button>-->
+        <button class="func-button" id="and-button">∧</button>
+        <button class="func-button" id="or-button">∨</button>
+        <button class="func-button" id="not-button">¬</button>
+        <button class="func-button" id="xor-button">⊕</button>
+        <button class="func-button" id="equiv-button">≡</button>
+        <button class="func-button" id="implies-button">→</button>
+    </div>
+
+    </header>
+
+    <div class="table-holder" id="table-holder">
+
+    </div>
+
+    <div class="prev">
+        <ul>
+          {{#each current}}
+            {{> formula}}
+          {{/each}}
+        </ul>
+    </div>
+  </div>
+</body>
